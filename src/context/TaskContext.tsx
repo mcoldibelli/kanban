@@ -22,3 +22,5 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
 
     return <TaskContext.Provider value={value}>{children}</TaskContext.Provider>;
 };
+
+export default TaskProvider;

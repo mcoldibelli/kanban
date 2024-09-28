@@ -1,10 +1,9 @@
-import TaskItem from "./components/TaskItem.tsx";
-import {tasks} from "./data/database.ts";
+import TaskList from "./components/TaskList.tsx";
 
 function App() {
   return (
     <>
-        <TaskItem task={tasks[0]} />
+        <TaskList />
     </>
   )
 }
