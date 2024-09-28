@@ -1,13 +1,5 @@
 import { createContext, useState, ReactNode } from 'react';
-
-type TaskState = 'pending' | 'in_progress' | 'completed';
-
-type Task = {
-    id: number;
-    title: string;
-    description: string;
-    state: TaskState;
-};
+import {Task} from "../types/TaskType.tsx";
 
 type TaskContextType = {
     tasks: Task[];
@@ -30,5 +22,3 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
 
     return <TaskContext.Provider value={value}>{children}</TaskContext.Provider>;
 };
-
-export default TaskContext;
