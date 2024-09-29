@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Comprar mantimentos",
+        "description": "Ir ao supermercado para comprar frutas e legumes",
+        "status": "pending"
+    },
+    {
+        "id": 2,
+        "title": "Estudar programação",
+        "description": "Completar o curso de JavaScript",
+        "status": "in_progress"
+    },
+    {
+        "id": 3,
+        "title": "Exercício matinal",
+        "description": "Correr no parque por 30 minutos",
+        "status": "completed"
+    }
+]
