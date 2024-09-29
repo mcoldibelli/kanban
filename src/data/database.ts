@@ -1,4 +1,4 @@
-import {Task} from "../types/TaskType.tsx";
+import {Task} from "../types/TaskType";
 
 export const tasks:Task[] =
 [

@@ -1,6 +1,6 @@
 import { createContext, useState, ReactNode } from 'react';
-import { Task } from '../types/TaskType';
 import { tasks as mockedTasks } from '../data/database';
+import { Task } from '../types/TaskType';
 
 type TaskContextType = {
     tasks: Task[];
@@ -12,7 +12,7 @@ type TaskContextType = {
 const TaskContext = createContext<TaskContextType>({} as TaskContextType);
 
 export const TaskProvider = ({ children }: { children: ReactNode }) => {
-    const [tasks, setTasks] = useState<Task[]>(mockedTasks);
+    const [tasks, setTasks] = useState<Task[]>(mockedTasks as Task[]);
 
     const addTask = (task: Task) => {
         setTasks((prevTasks) => [...prevTasks, task]);
