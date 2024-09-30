@@ -1,10 +1,20 @@
-const theme = {
+const theme: any = {
     colors: {
-        black: '#000000',
-        green: '#80d301',
-        lightGreen: '#a3be71',
-        yellow: '#ffff00',
-        olive: '#8fbb46'
+        background: { rgb: 'rgb(245, 245, 245)', rgba: 'rgba(245, 245, 245, 1)' },
+        black: { rgb: 'rgb(0, 0, 0)', rgba: 'rgba(0, 0, 0, 1)' },
+        green: { rgb: 'rgb(128, 211, 1)', rgba: 'rgba(128, 211, 1, 1)' },
+        lightGreen: { rgb: 'rgb(163, 190, 113)', rgba: 'rgba(163, 190, 113, 1)' },
+        yellow: { rgb: 'rgb(255, 255, 0)', rgba: 'rgba(255, 255, 0, 1)' },
+        olive: { rgb: 'rgb(143, 187, 70)', rgba: 'rgba(143, 187, 70, 1)' }
+    },
+
+    getColor: (colorName: keyof typeof theme.colors, alpha?: number) => {
+        const color = theme.colors[colorName];
+        if (alpha !== undefined) {
+            const [r, g, b] = color.rgb.match(/\d+/g)!.map(Number);
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+        return color.rgb;
     }
 };
 
