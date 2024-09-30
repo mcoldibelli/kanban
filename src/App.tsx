@@ -7,7 +7,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <TaskProvider>
-
+        <Kanban />
       </TaskProvider>
     </ThemeProvider>
   )
